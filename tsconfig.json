@@ -1,0 +1,9 @@
+{
+    "extends": "./tools/tsconfig",
+    "compilerOptions": {
+        "paths": {
+            "@nativescript-community/document-scanner": ["src/document-scanner"],
+            "@nativescript-community/document-scanner/*": ["src/document-scanner/*"]
+        }
+    }
+}

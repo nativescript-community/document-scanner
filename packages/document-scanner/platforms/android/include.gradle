@@ -1,0 +1,8 @@
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies{
+	def documentScannerVersion =  project.hasProperty("documentScannerVersion") ? project.documentScannerVersion : "1.3.5"
+    implementation "com.github.RomanTsarou:android-document-scanner:$documentScannerVersion"
+}

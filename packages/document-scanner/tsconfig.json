@@ -1,0 +1,13 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "rootDir": "../../src/document-scanner",
+        "outDir": "./",
+        "paths": {
+            "@nativescript-community/document-scanner": ["packages/document-scanner"],
+            "@nativescript-community/document-scanner/*": ["packages/document-scanner/*"]
+        }
+    },
+    "include": ["../../src/document-scanner/**/*", "../../references.d.ts", "../../tools/references.d.ts", "../../src/references.d.ts"],
+    "exclude": ["../../src/document-scanner/angular/**"]
+}

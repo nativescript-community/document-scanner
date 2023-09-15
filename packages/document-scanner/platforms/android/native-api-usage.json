@@ -1,0 +1,8 @@
+{
+  "uses": [
+    "com.websitebeaver.documentscanner:DocumentScanner",
+    "com.websitebeaver.documentscanner.utils:ImageUtil",
+    "com.websitebeaver.documentscanner.constants:ResponseType"
+  ]
+}
+
