@@ -1,11 +1,13 @@
 <script lang="typescript">
     import { DocumentScanner } from '@nativescript-community/document-scanner';
+    import { request } from '@nativescript-community/perms';
     import { goBack } from 'svelte-native';
     const documentScanner = new DocumentScanner();
     async function startScan() {
         try {
+            await request('camera');
             const result = await documentScanner.startScan();
-            console.log('scan result', result)
+            console.log('scan result', result);
         } catch (error) {
             console.error(error);
         }

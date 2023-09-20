@@ -14,119 +14,44 @@ Run the following command from the root of your project:
 
 `ns plugin add {{ pkg.name }}`
 
-## API
+## Usage
 
-### Properties
-
-| Property | Type |
-| - | - |
-| items | `array` or `ItemsSource` 
-| selectedIndex | `number` |
-| canGoRight | `boolean` |
-| canGoLeft | `boolean` |
-| spacing | `PercentLengthType` |
-| peaking | `PercentLengthType` |
-| perPage | `number` |
-| indicator | `string`  ('disable', 'none', 'worm', 'fill', 'swap', 'thin_worm', 'flat')|
-| circularMode | `boolean` |
-| autoPlayDelay | `number` |
-| autoPlay | `boolean` |
-| orientation | `string` ('horizontal' or 'vertical') |
-| autoPlay | `boolean` |
-| disableSwipe | `boolean` |
-| showIndicator | `boolean` |
-| transformers | `string` |
-
-
-```
-Pager for NativeScript supports the core ObservableArray module part of the core NativeScript modules collection. Using an ObservableArray instance as a source for Pager will ensure that changes in the source collection will be automatically taken care of by the control.
-```
-
-
-## Usage in Angular
-
-Import the module into your project.
-
-```typescript
-import { PagerModule } from "@nativescript-community/document-scanner/angular";
-
-@NgModule({
-    imports: [
-        PagerModule,
-    ],
-})
-```
-
-### Examples
-
-- [Static Pager](demo-snippets/ng/static-pager)
-  - A simple pager example using static content.
-- [Basic Pager](demo-snippets/ng/basic-pager)
-  - A simple pager example using dynamic content.
-
-## Usage in React
-
-Import the module into your project.
-
-```typescript
-import { Pager } from '@nativescript-community/document-scanner/react';
-```
-
-### Examples
-
-- [Basic Pager](demo-snippets/react/BasicPager.tsx)
-  - A simple pager example using dynamic content.
-## Usage in Svelte
-
-Import the module into your project.
-
-```typescript
-import { registerNativeViewElement } from 'svelte-native/dom';
-
-import PagerElement from '@nativescript-community/document-scanner/svelte';
-import { PagerItem } from '@nativescript-community/document-scanner';
-
-PagerElement.register();
-registerNativeViewElement('pageritem', () => PagerItem);
-```
-
-### Examples
-
-- [Static Pager](demo-snippets/svelte/StaticPager.svelte)
-  - A simple pager example using static content.
-- [Basic Pager](demo-snippets/svelte/BasicPager.svelte)
-  - A simple pager example using dynamic content.
-
-## Usage in Vue
-
-Import the module into your project.
-
-```typescript
-import Vue from 'nativescript-vue';
-import Pager from '@nativescript-community/document-scanner/vue';
-
-Vue.use(Pager);
-```
-
-### Examples
-
-- [Static Pager](demo-snippets/vue/StaticPager.vue)
-  - A simple pager example using static content.
-- [Basic Pager](demo-snippets/vue/BasicPager.vue)
-  - A simple pager example using dynamic content.
-
-
-## Custom Transformer
-
-You can define custom transformer for iOS/Android
-
-You can follow the `Scale` example for [iOS](src/document-scanner/transformers/Scale.ios.ts) and [Android](src/document-scanner/transformers/Scale.android.ts) to create your custom transformer.
-
-Then you can register your transformer on app start with (this example registered the included but not registered Scale transformer): 
+To use that plugin you need camera permission.
+Dont forget to ask for it at runtime using something like
 ```ts
-import { Pager } from '@nativescript-community/document-scanner';
-import transformer from '@nativescript-community/document-scanner/transformers/Scale';
-
-Pager.registerTransformer('scale', transformer)
+    import { request } from '@nativescript-community/perms';
+    await request('camera');
 ```
-Then you can use that transformer with the `transformers` property of `Pager`
+
+After that:
+```ts
+    const documentScanner = new DocumentScanner();
+    try {
+        const result: string[] | any[] /* UIImage[] on iOS */ = await documentScanner.startScan();
+        console.log('scan result', result);
+    } catch (error) {
+        console.error(error);
+    }
+```
+
+You can see the options in the typings.
+
+### iOS 
+
+On ios the result is an array of `UIImage`
+
+
+## Demos
+This repository includes Svelte demos. In order to run these execute the following in your shell:
+```shell
+$ git clone https://github.com/@nativescript-community/document-scanner
+$ cd document-scanner
+$ npm run i
+$ npm run setup
+$ npm run build
+$ cd demo-svelte
+$ ns run ios|android
+```
+
+{{ load:../../tools/readme/demos-and-development.md }}
+{{ load:../../tools/readme/questions.md }}

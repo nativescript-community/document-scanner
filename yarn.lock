@@ -1672,9 +1672,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nativescript-community/document-scanner@link:../packages/document-scanner::locator=%40nativescript-community%2Ftemplate-snippet%40file%3Ademo-snippets%23demo-snippets%3A%3Ahash%3Dcfa7c5%26locator%3Droot-workspace-0b6124%2540workspace%253A.":
+"@nativescript-community/document-scanner@link:../packages/document-scanner::locator=%40nativescript-community%2Ftemplate-snippet%40file%3Ademo-snippets%23demo-snippets%3A%3Ahash%3Df358a5%26locator%3Droot-workspace-0b6124%2540workspace%253A.":
   version: 0.0.0-use.local
-  resolution: "@nativescript-community/document-scanner@link:../packages/document-scanner::locator=%40nativescript-community%2Ftemplate-snippet%40file%3Ademo-snippets%23demo-snippets%3A%3Ahash%3Dcfa7c5%26locator%3Droot-workspace-0b6124%2540workspace%253A."
+  resolution: "@nativescript-community/document-scanner@link:../packages/document-scanner::locator=%40nativescript-community%2Ftemplate-snippet%40file%3Ademo-snippets%23demo-snippets%3A%3Ahash%3Df358a5%26locator%3Droot-workspace-0b6124%2540workspace%253A."
   languageName: node
   linkType: soft
 
@@ -1689,6 +1689,13 @@ __metadata:
   resolution: "@nativescript-community/document-scanner@workspace:packages/document-scanner"
   languageName: unknown
   linkType: soft
+
+"@nativescript-community/perms@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@nativescript-community/perms@npm:2.3.0"
+  checksum: aa3c1a0cb0d6a5898fca88abed449bb4255aee37ca83a22cc97cacce1f5b9487bf1aba8dbabca8e38f040b329180c86bc31dd5d3b77c7a79161e623b9dc69a68
+  languageName: node
+  linkType: hard
 
 "@nativescript-community/plugin-seed-tools@file:tools::locator=root-workspace-0b6124%40workspace%3A.":
   version: 1.0.0
@@ -1766,15 +1773,17 @@ __metadata:
   resolution: "@nativescript-community/template-snippet@workspace:demo-snippets"
   dependencies:
     "@nativescript-community/document-scanner": "link:../packages/document-scanner"
+    "@nativescript-community/perms": ^2.3.0
   languageName: unknown
   linkType: soft
 
 "@nativescript-community/template-snippet@file:demo-snippets::locator=root-workspace-0b6124%40workspace%3A.":
   version: 0.0.1
-  resolution: "@nativescript-community/template-snippet@file:demo-snippets#demo-snippets::hash=cfa7c5&locator=root-workspace-0b6124%40workspace%3A."
+  resolution: "@nativescript-community/template-snippet@file:demo-snippets#demo-snippets::hash=f358a5&locator=root-workspace-0b6124%40workspace%3A."
   dependencies:
     "@nativescript-community/document-scanner": "link:../packages/document-scanner"
-  checksum: a3e92601202a083cad4fb0830d139ca727c897ed6c8e07561f7d8e8e0e57d0191abace63b1277c32916055b8771d63eb2fec6373827217645a11e1b5fef4dd37
+    "@nativescript-community/perms": ^2.3.0
+  checksum: 388b7891b54b87ee0d0a9e026ec200f79052fec11bee8b92e97ecc1fc21f62c2a881a4b7ab743da95bdf62ce1a0229456b7fefadbfb25ff3baf92fa49434dccd
   languageName: node
   linkType: hard
 
@@ -7038,7 +7047,7 @@ __metadata:
 
 "fsevents@patch:fsevents@^2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=18f3a7"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -12629,7 +12638,7 @@ __metadata:
 
 "resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.7#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.9.0#~builtin<compat/resolve>":
   version: 1.22.5
-  resolution: "resolve@patch:resolve@npm%3A1.22.5#~builtin<compat/resolve>::version=1.22.5&hash=07638b"
+  resolution: "resolve@patch:resolve@npm%3A1.22.5#~builtin<compat/resolve>::version=1.22.5&hash=c3c19d"
   dependencies:
     is-core-module: ^2.13.0
     path-parse: ^1.0.7
@@ -12642,7 +12651,7 @@ __metadata:
 
 "resolve@patch:resolve@^2.0.0-next.4#~builtin<compat/resolve>":
   version: 2.0.0-next.4
-  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=07638b"
+  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=c3c19d"
   dependencies:
     is-core-module: ^2.9.0
     path-parse: ^1.0.7
@@ -14459,7 +14468,7 @@ __metadata:
 
 "typescript@patch:typescript@^3.5.3#~builtin<compat/typescript>":
   version: 3.9.10
-  resolution: "typescript@patch:typescript@npm%3A3.9.10#~builtin<compat/typescript>::version=3.9.10&hash=a1c5e5"
+  resolution: "typescript@patch:typescript@npm%3A3.9.10#~builtin<compat/typescript>::version=3.9.10&hash=3bd3d3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
@@ -14469,7 +14478,7 @@ __metadata:
 
 "typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>":
   version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=a1c5e5"
+  resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=ad5954"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
@@ -14479,7 +14488,7 @@ __metadata:
 
 "typescript@patch:typescript@~4.2.3#~builtin<compat/typescript>":
   version: 4.2.4
-  resolution: "typescript@patch:typescript@npm%3A4.2.4#~builtin<compat/typescript>::version=4.2.4&hash=a1c5e5"
+  resolution: "typescript@patch:typescript@npm%3A4.2.4#~builtin<compat/typescript>::version=4.2.4&hash=334f98"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
@@ -14489,11 +14498,11 @@ __metadata:
 
 "typescript@patch:typescript@~4.8.4#~builtin<compat/typescript>":
   version: 4.8.4
-  resolution: "typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=a1c5e5"
+  resolution: "typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=0102e9"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 563a0ef47abae6df27a9a3ab38f75fc681f633ccf1a3502b1108e252e187787893de689220f4544aaf95a371a4eb3141e4a337deb9895de5ac3c1ca76430e5f0
+  checksum: 301459fc3eb3b1a38fe91bf96d98eb55da88a9cb17b4ef80b4d105d620f4d547ba776cc27b44cc2ef58b66eda23fe0a74142feb5e79a6fb99f54fc018a696afa
   languageName: node
   linkType: hard
 
