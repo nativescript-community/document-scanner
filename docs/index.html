@@ -12,9 +12,7 @@
 <div class="col-8 col-content">
 <div class="tsd-page-title">
 <h2>@nativescript-community/document-scanner</h2></div>
-<div class="tsd-panel tsd-typography"><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->This monorepo contains multiple packages:<br><br><details>
-<summary><b>ui-pager</b></summary>
-<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
+<div class="tsd-panel tsd-typography"><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
 <!--  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -34,14 +32,14 @@
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<h1 align="center">@nativescript-community/ui-pager</h1>
+<h1 align="center">@nativescript-community/document-scanner</h1>
 <p align="center">
-        <a href="https://npmcharts.com/compare/@nativescript-community/ui-pager?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@nativescript-community/ui-pager.svg" height="20"/></a>
-<a href="https://www.npmjs.com/package/@nativescript-community/ui-pager"><img alt="NPM Version" src="https://img.shields.io/npm/v/@nativescript-community/ui-pager.svg" height="20"/></a>
+        <a href="https://npmcharts.com/compare/@nativescript-community/document-scanner?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@nativescript-community/document-scanner.svg" height="20"/></a>
+<a href="https://www.npmjs.com/package/@nativescript-community/document-scanner"><img alt="NPM Version" src="https://img.shields.io/npm/v/@nativescript-community/document-scanner.svg" height="20"/></a>
     </p>
 
 <p align="center">
-  <b>A NativeScript Pager / Carousel component that allows the user to swipe left and right through pages of data. </b></br>
+  <b>A NativeScript plugin to scan documents </b></br>
   <sub><sub>
 </p>
 
@@ -51,8 +49,8 @@
 <table>
 <thead>
 <tr>
-<th><img src="https://github.com/nativescript-community/ui-pager/raw/master/images/demo-ios.gif" height="500" /></th>
-<th><img src="https://github.com/nativescript-community/ui-pager/raw/master/images/demo-android.gif" height="500" /></th>
+<th><img src="https://github.com/nativescript-community/document-scanner/raw/master/images/demo-ios.gif" height="500" /></th>
+<th><img src="https://github.com/nativescript-community/document-scanner/raw/master/images/demo-android.gif" height="500" /></th>
 </tr>
 </thead>
 <tbody><tr>
@@ -68,27 +66,26 @@
 </a>
 <ul>
 <li><a href="#installation">Installation</a></li>
-<li><a href="#api">API</a><ul>
-<li><a href="#properties">Properties</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#ios-">iOS </a></li>
 </ul>
 </li>
-<li><a href="#usage-in-angular">Usage in Angular</a><ul>
-<li><a href="#examples">Examples</a></li>
+<li><a href="#demos">Demos</a></li>
+<li><a href="#demos-and-development">Demos and Development</a><ul>
+<li><a href="#repo-setup">Repo Setup</a></li>
+<li><a href="#build">Build</a></li>
+<li><a href="#demos-1">Demos</a></li>
 </ul>
 </li>
-<li><a href="#usage-in-react">Usage in React</a><ul>
-<li><a href="#examples-1">Examples</a></li>
+<li><a href="#contributing">Contributing</a><ul>
+<li><a href="#update-repo-">Update repo </a></li>
+<li><a href="#update-readme-">Update readme </a></li>
+<li><a href="#update-doc-">Update doc </a></li>
+<li><a href="#publish">Publish</a></li>
+<li><a href="#modifying-submodules">modifying submodules</a></li>
 </ul>
 </li>
-<li><a href="#usage-in-svelte">Usage in Svelte</a><ul>
-<li><a href="#examples-2">Examples</a></li>
-</ul>
-</li>
-<li><a href="#usage-in-vue">Usage in Vue</a><ul>
-<li><a href="#examples-3">Examples</a></li>
-</ul>
-</li>
-<li><a href="#custom-transformer">Custom Transformer</a></li>
+<li><a href="#questions">Questions</a></li>
 </ul>
 <p><a href="#installation"></a></p>
 <p><a href="#installation"></a></p>
@@ -97,314 +94,36 @@
   <h2>Installation</h2>
 </a>
 <p>Run the following command from the root of your project:</p>
-<p><code>ns plugin add @nativescript-community/ui-pager</code></p>
-<p><a href="#api"></a></p>
-<p><a href="#api"></a></p>
+<p><code>ns plugin add @nativescript-community/document-scanner</code></p>
+<p><a href="#usage"></a></p>
+<p><a href="#usage"></a></p>
 
-<a href="#api" id="api" style="color: inherit; text-decoration: none;">
-  <h2>API</h2>
+<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+  <h2>Usage</h2>
 </a>
-
-<a href="#properties" id="properties" style="color: inherit; text-decoration: none;">
-  <h3>Properties</h3>
-</a>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>items</td>
-<td><code>array</code> or <code>ItemsSource</code></td>
-</tr>
-<tr>
-<td>selectedIndex</td>
-<td><code>number</code></td>
-</tr>
-<tr>
-<td>canGoRight</td>
-<td><code>boolean</code></td>
-</tr>
-<tr>
-<td>canGoLeft</td>
-<td><code>boolean</code></td>
-</tr>
-<tr>
-<td>spacing</td>
-<td><code>PercentLengthType</code></td>
-</tr>
-<tr>
-<td>peaking</td>
-<td><code>PercentLengthType</code></td>
-</tr>
-<tr>
-<td>perPage</td>
-<td><code>number</code></td>
-</tr>
-<tr>
-<td>indicator</td>
-<td><code>string</code>  (&#39;disable&#39;, &#39;none&#39;, &#39;worm&#39;, &#39;fill&#39;, &#39;swap&#39;, &#39;thin_worm&#39;, &#39;flat&#39;)</td>
-</tr>
-<tr>
-<td>circularMode</td>
-<td><code>boolean</code></td>
-</tr>
-<tr>
-<td>autoPlayDelay</td>
-<td><code>number</code></td>
-</tr>
-<tr>
-<td>autoPlay</td>
-<td><code>boolean</code></td>
-</tr>
-<tr>
-<td>orientation</td>
-<td><code>string</code> (&#39;horizontal&#39; or &#39;vertical&#39;)</td>
-</tr>
-<tr>
-<td>autoPlay</td>
-<td><code>boolean</code></td>
-</tr>
-<tr>
-<td>disableSwipe</td>
-<td><code>boolean</code></td>
-</tr>
-<tr>
-<td>showIndicator</td>
-<td><code>boolean</code></td>
-</tr>
-<tr>
-<td>transformers</td>
-<td><code>string</code></td>
-</tr>
-</tbody></table>
-<pre><code><span class="hl-0">Pager</span><span class="hl-1"> </span><span class="hl-0">for</span><span class="hl-1"> </span><span class="hl-0">NativeScript</span><span class="hl-1"> </span><span class="hl-0">supports</span><span class="hl-1"> </span><span class="hl-0">the</span><span class="hl-1"> </span><span class="hl-0">core</span><span class="hl-1"> </span><span class="hl-0">ObservableArray</span><span class="hl-1"> </span><span class="hl-2">module</span><span class="hl-1"> </span><span class="hl-3">part</span><span class="hl-1"> </span><span class="hl-3">of</span><span class="hl-1"> </span><span class="hl-3">the</span><span class="hl-1"> </span><span class="hl-3">core</span><span class="hl-1"> </span><span class="hl-3">NativeScript</span><span class="hl-1"> </span><span class="hl-3">modules</span><span class="hl-1"> </span><span class="hl-3">collection</span><span class="hl-1">. </span><span class="hl-3">Using</span><span class="hl-1"> </span><span class="hl-3">an</span><span class="hl-1"> </span><span class="hl-3">ObservableArray</span><span class="hl-1"> </span><span class="hl-3">instance</span><span class="hl-1"> </span><span class="hl-3">as</span><span class="hl-1"> </span><span class="hl-3">a</span><span class="hl-1"> </span><span class="hl-3">source</span><span class="hl-1"> </span><span class="hl-3">for</span><span class="hl-1"> </span><span class="hl-3">Pager</span><span class="hl-1"> </span><span class="hl-3">will</span><span class="hl-1"> </span><span class="hl-3">ensure</span><span class="hl-1"> </span><span class="hl-3">that</span><span class="hl-1"> </span><span class="hl-3">changes</span><span class="hl-1"> </span><span class="hl-3">in</span><span class="hl-1"> </span><span class="hl-3">the</span><span class="hl-1"> </span><span class="hl-3">source</span><span class="hl-1"> </span><span class="hl-3">collection</span><span class="hl-1"> </span><span class="hl-3">will</span><span class="hl-1"> </span><span class="hl-3">be</span><span class="hl-1"> </span><span class="hl-3">automatically</span><span class="hl-1"> </span><span class="hl-3">taken</span><span class="hl-1"> </span><span class="hl-3">care</span><span class="hl-1"> </span><span class="hl-3">of</span><span class="hl-1"> </span><span class="hl-3">by</span><span class="hl-1"> </span><span class="hl-3">the</span><span class="hl-1"> </span><span class="hl-3">control</span><span class="hl-1">.</span>
+<p>To use that plugin you need camera permission.
+Dont forget to ask for it at runtime using something like</p>
+<pre><code class="language-ts"><span class="hl-0">    </span><span class="hl-1">import</span><span class="hl-0"> { </span><span class="hl-2">request</span><span class="hl-0"> } </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-3">&#39;@nativescript-community/perms&#39;</span><span class="hl-0">;</span><br/><span class="hl-0">    </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-4">request</span><span class="hl-0">(</span><span class="hl-3">&#39;camera&#39;</span><span class="hl-0">);</span>
 </code></pre>
-<p><a href="#usage-in-angular"></a></p>
-<p><a href="#usage-in-angular"></a></p>
-
-<a href="#usage-in-angular" id="usage-in-angular" style="color: inherit; text-decoration: none;">
-  <h2>Usage in Angular</h2>
-</a>
-<p>Import the module into your project.</p>
-<pre><code class="language-typescript"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-0">PagerModule</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&quot;@nativescript-community/ui-pager/angular&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-1">@</span><span class="hl-6">NgModule</span><span class="hl-1">({</span><br/><span class="hl-1">    </span><span class="hl-0">imports:</span><span class="hl-1"> [</span><br/><span class="hl-1">        </span><span class="hl-0">PagerModule</span><span class="hl-1">,</span><br/><span class="hl-1">    ],</span><br/><span class="hl-1">})</span>
+<p>After that:</p>
+<pre><code class="language-ts"><span class="hl-0">    </span><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-6">documentScanner</span><span class="hl-0"> = </span><span class="hl-5">new</span><span class="hl-0"> </span><span class="hl-4">DocumentScanner</span><span class="hl-0">();</span><br/><span class="hl-0">    </span><span class="hl-1">try</span><span class="hl-0"> {</span><br/><span class="hl-0">        </span><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-6">result</span><span class="hl-0">: </span><span class="hl-7">string</span><span class="hl-0">[] | </span><span class="hl-7">any</span><span class="hl-0">[] </span><span class="hl-8">/* UIImage[] on iOS */</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">documentScanner</span><span class="hl-0">.</span><span class="hl-4">startScan</span><span class="hl-0">();</span><br/><span class="hl-0">        </span><span class="hl-2">console</span><span class="hl-0">.</span><span class="hl-4">log</span><span class="hl-0">(</span><span class="hl-3">&#39;scan result&#39;</span><span class="hl-0">, </span><span class="hl-2">result</span><span class="hl-0">);</span><br/><span class="hl-0">    } </span><span class="hl-1">catch</span><span class="hl-0"> (</span><span class="hl-2">error</span><span class="hl-0">) {</span><br/><span class="hl-0">        </span><span class="hl-2">console</span><span class="hl-0">.</span><span class="hl-4">error</span><span class="hl-0">(</span><span class="hl-2">error</span><span class="hl-0">);</span><br/><span class="hl-0">    }</span>
 </code></pre>
+<p>You can see the options in the typings.</p>
 
-<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
-  <h3>Examples</h3>
+<a href="#ios" id="ios" style="color: inherit; text-decoration: none;">
+  <h3>iOS</h3>
 </a>
-<ul>
-<li><a href="demo-snippets/ng/static-pager">Static Pager</a><ul>
-<li>A simple pager example using static content.</li>
-</ul>
-</li>
-<li><a href="demo-snippets/ng/basic-pager">Basic Pager</a><ul>
-<li>A simple pager example using dynamic content.</li>
-</ul>
-</li>
-</ul>
-<p><a href="#usage-in-react"></a></p>
-<p><a href="#usage-in-react"></a></p>
+<p>On ios the result is an array of <code>UIImage</code></p>
+<p><a href="#demos"></a></p>
+<p><a href="#demos"></a></p>
 
-<a href="#usage-in-react" id="usage-in-react" style="color: inherit; text-decoration: none;">
-  <h2>Usage in React</h2>
+<a href="#demos" id="demos" style="color: inherit; text-decoration: none;">
+  <h2>Demos</h2>
 </a>
-<p>Import the module into your project.</p>
-<pre><code class="language-typescript"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-0">Pager</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&#39;@nativescript-community/ui-pager/react&#39;</span><span class="hl-1">;</span>
+<p>This repository includes Svelte demos. In order to run these execute the following in your shell:</p>
+<pre><code class="language-shell"><span class="hl-4">$</span><span class="hl-0"> </span><span class="hl-3">git</span><span class="hl-0"> </span><span class="hl-3">clone</span><span class="hl-0"> </span><span class="hl-3">https://github.com/@nativescript-community/document-scanner</span><br/><span class="hl-4">$</span><span class="hl-0"> </span><span class="hl-3">cd</span><span class="hl-0"> </span><span class="hl-3">document-scanner</span><br/><span class="hl-4">$</span><span class="hl-0"> </span><span class="hl-3">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">i</span><br/><span class="hl-4">$</span><span class="hl-0"> </span><span class="hl-3">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">setup</span><br/><span class="hl-4">$</span><span class="hl-0"> </span><span class="hl-3">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">build</span><br/><span class="hl-4">$</span><span class="hl-0"> </span><span class="hl-3">cd</span><span class="hl-0"> </span><span class="hl-3">demo-svelte</span><br/><span class="hl-4">$</span><span class="hl-0"> </span><span class="hl-3">ns</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">ios</span><span class="hl-0">|</span><span class="hl-4">android</span>
 </code></pre>
-
-<a href="#examples-1" id="examples-1" style="color: inherit; text-decoration: none;">
-  <h3>Examples</h3>
-</a>
-<ul>
-<li><a href="demo-snippets/react/BasicPager.tsx">Basic Pager</a><ul>
-<li>A simple pager example using dynamic content.</li>
-</ul>
-</li>
-</ul>
-<p><a href="#usage-in-svelte"></a></p>
-<p><a href="#usage-in-svelte"></a></p>
-
-<a href="#usage-in-svelte" id="usage-in-svelte" style="color: inherit; text-decoration: none;">
-  <h2>Usage in Svelte</h2>
-</a>
-<p>Import the module into your project.</p>
-<pre><code class="language-typescript"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-0">registerNativeViewElement</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&#39;svelte-native/dom&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">import</span><span class="hl-1"> </span><span class="hl-0">PagerElement</span><span class="hl-1"> </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&#39;@nativescript-community/ui-pager/svelte&#39;</span><span class="hl-1">;</span><br/><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-0">PagerItem</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&#39;@nativescript-community/ui-pager&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">PagerElement</span><span class="hl-1">.</span><span class="hl-6">register</span><span class="hl-1">();</span><br/><span class="hl-6">registerNativeViewElement</span><span class="hl-1">(</span><span class="hl-5">&#39;pageritem&#39;</span><span class="hl-1">, () </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-0">PagerItem</span><span class="hl-1">);</span>
-</code></pre>
-
-<a href="#examples-2" id="examples-2" style="color: inherit; text-decoration: none;">
-  <h3>Examples</h3>
-</a>
-<ul>
-<li><a href="demo-snippets/svelte/StaticPager.svelte">Static Pager</a><ul>
-<li>A simple pager example using static content.</li>
-</ul>
-</li>
-<li><a href="demo-snippets/svelte/BasicPager.svelte">Basic Pager</a><ul>
-<li>A simple pager example using dynamic content.</li>
-</ul>
-</li>
-</ul>
-<p><a href="#usage-in-vue"></a></p>
-<p><a href="#usage-in-vue"></a></p>
-
-<a href="#usage-in-vue" id="usage-in-vue" style="color: inherit; text-decoration: none;">
-  <h2>Usage in Vue</h2>
-</a>
-<p>Import the module into your project.</p>
-<pre><code class="language-typescript"><span class="hl-4">import</span><span class="hl-1"> </span><span class="hl-0">Vue</span><span class="hl-1"> </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&#39;nativescript-vue&#39;</span><span class="hl-1">;</span><br/><span class="hl-4">import</span><span class="hl-1"> </span><span class="hl-0">Pager</span><span class="hl-1"> </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&#39;@nativescript-community/ui-pager/vue&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">Vue</span><span class="hl-1">.</span><span class="hl-6">use</span><span class="hl-1">(</span><span class="hl-0">Pager</span><span class="hl-1">);</span>
-</code></pre>
-
-<a href="#examples-3" id="examples-3" style="color: inherit; text-decoration: none;">
-  <h3>Examples</h3>
-</a>
-<ul>
-<li><a href="demo-snippets/vue/StaticPager.vue">Static Pager</a><ul>
-<li>A simple pager example using static content.</li>
-</ul>
-</li>
-<li><a href="demo-snippets/vue/BasicPager.vue">Basic Pager</a><ul>
-<li>A simple pager example using dynamic content.</li>
-</ul>
-</li>
-</ul>
-<p><a href="#custom-transformer"></a></p>
-<p><a href="#custom-transformer"></a></p>
-
-<a href="#custom-transformer" id="custom-transformer" style="color: inherit; text-decoration: none;">
-  <h2>Custom Transformer</h2>
-</a>
-<p>You can define custom transformer for iOS/Android</p>
-<p>You can follow the <code>Scale</code> example for <a href="src/ui-pager/transformers/Scale.ios.ts">iOS</a> and <a href="src/ui-pager/transformers/Scale.android.ts">Android</a> to create your custom transformer.</p>
-<p>Then you can register your transformer on app start with (this example registered the included but not registered Scale transformer): </p>
-<pre><code class="language-ts"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-0">Pager</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&#39;@nativescript-community/ui-pager&#39;</span><span class="hl-1">;</span><br/><span class="hl-4">import</span><span class="hl-1"> </span><span class="hl-0">transformer</span><span class="hl-1"> </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&#39;@nativescript-community/ui-pager/transformers/Scale&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">Pager</span><span class="hl-1">.</span><span class="hl-6">registerTransformer</span><span class="hl-1">(</span><span class="hl-5">&#39;scale&#39;</span><span class="hl-1">, </span><span class="hl-0">transformer</span><span class="hl-1">)</span>
-</code></pre>
-<p>Then you can use that transformer with the <code>transformers</code> property of <code>Pager</code></p>
-</details><details>
-<summary><b>ui-pager-indicator</b></summary>
-<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
-<!--  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      DO NOT EDIT THIS READEME DIRECTLY! Edit "bluesprint.md" instead.
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<h1 align="center">@nativescript-community/ui-pager-indicator</h1>
-<p align="center">
-        <a href="https://npmcharts.com/compare/@nativescript-community/ui-pager-indicator?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@nativescript-community/ui-pager-indicator.svg" height="20"/></a>
-<a href="https://www.npmjs.com/package/@nativescript-community/ui-pager-indicator"><img alt="NPM Version" src="https://img.shields.io/npm/v/@nativescript-community/ui-pager-indicator.svg" height="20"/></a>
-    </p>
-
-<p align="center">
-  <b>A NativeScript Indicator for Pager / Carousel /CollectionView</b></br>
-  <sub><sub>
-</p>
-
-<br />
-
-
-<table>
-<thead>
-<tr>
-<th><img src="https://github.com/nativescript-community/ui-pager/raw/master/images/demo-ios.gif" height="500" /></th>
-<th><img src="https://github.com/nativescript-community/ui-pager/raw/master/images/demo-android.gif" height="500" /></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>iOS Demo</td>
-<td>Android Demo</td>
-</tr>
-</tbody></table>
-<p><a href="#table-of-contents"></a></p>
-<p><a href="#table-of-contents"></a></p>
-
-<a href="#table-of-contents-1" id="table-of-contents-1" style="color: inherit; text-decoration: none;">
-  <h2>Table of Contents</h2>
-</a>
-<ul>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#api">API</a><ul>
-<li><a href="#properties">Properties</a></li>
-</ul>
-</li>
-<li><a href="#usage-in-vue">Usage in Vue</a><ul>
-<li><a href="#examples">Examples</a></li>
-</ul>
-</li>
-</ul>
-<p><a href="#installation"></a></p>
-<p><a href="#installation"></a></p>
-
-<a href="#installation-1" id="installation-1" style="color: inherit; text-decoration: none;">
-  <h2>Installation</h2>
-</a>
-<p>Run the following command from the root of your project:</p>
-<p><code>ns plugin add @nativescript-community/ui-pager-indicator</code></p>
-<p><a href="#api"></a></p>
-<p><a href="#api"></a></p>
-
-<a href="#api-1" id="api-1" style="color: inherit; text-decoration: none;">
-  <h2>API</h2>
-</a>
-
-<a href="#properties-1" id="properties-1" style="color: inherit; text-decoration: none;">
-  <h3>Properties</h3>
-</a>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>color</td>
-<td><code>Color</code> or <code>string</code></td>
-</tr>
-<tr>
-<td>selectedColor</td>
-<td><code>Color</code> or <code>string</code></td>
-</tr>
-</tbody></table>
-<pre><code><span class="hl-0">PagerIndicator</span><span class="hl-1"> </span><span class="hl-0">add</span><span class="hl-1"> </span><span class="hl-0">page</span><span class="hl-1"> </span><span class="hl-0">control</span><span class="hl-1"> </span><span class="hl-0">for</span><span class="hl-1"> </span><span class="hl-0">Pager</span><span class="hl-1"> </span><span class="hl-0">or</span><span class="hl-1"> </span><span class="hl-0">other</span><span class="hl-1"> </span><span class="hl-0">Paging</span><span class="hl-1"> </span><span class="hl-0">Views</span><span class="hl-1">.</span>
-</code></pre>
-<p><a href="#usage-in-vue"></a></p>
-<p><a href="#usage-in-vue"></a></p>
-
-<a href="#usage-in-vue-1" id="usage-in-vue-1" style="color: inherit; text-decoration: none;">
-  <h2>Usage in Vue</h2>
-</a>
-<p>Import the module into your project.</p>
-<pre><code class="language-typescript"><span class="hl-4">import</span><span class="hl-1"> </span><span class="hl-0">Vue</span><span class="hl-1"> </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-5">&#39;nativescript-vue&#39;</span><span class="hl-1">;</span><br/><span class="hl-0">Vue</span><span class="hl-1">.</span><span class="hl-6">registerElement</span><span class="hl-1">(</span><span class="hl-5">&#39;PagerIndicator&#39;</span><span class="hl-1">, () </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-6">require</span><span class="hl-1">(</span><span class="hl-5">&#39;@nativescript-community/ui-pager-indicator&#39;</span><span class="hl-1">).</span><span class="hl-0">PagerIndicator</span><span class="hl-1">);</span>
-</code></pre>
-<p>then in your template:</p>
-<pre><code class="language-html"><span class="hl-7">&lt;</span><span class="hl-8">Pager</span><span class="hl-1"> </span><span class="hl-9">id</span><span class="hl-1">=</span><span class="hl-10">&quot;pager&quot;</span><span class="hl-1"> </span><span class="hl-9">:items</span><span class="hl-1">=</span><span class="hl-10">&quot;items&quot;</span><br/><span class="hl-1">    </span><span class="hl-9">...</span><br/><span class="hl-8">&lt;/Pager</span><span class="hl-7">&gt;</span><br/><span class="hl-7">&lt;</span><span class="hl-8">PagerIndicator</span><span class="hl-1"> </span><span class="hl-9">pagerViewId</span><span class="hl-1">=</span><span class="hl-10">&quot;pager&quot;</span><span class="hl-7">/&gt;</span>
-</code></pre>
-
-<a href="#examples-4" id="examples-4" style="color: inherit; text-decoration: none;">
-  <h3>Examples</h3>
-</a>
-<ul>
-<li><a href="demo-snippets/vue/Indicator.vue">Indicator Pager</a><ul>
-<li>A simple pager example using dynamic content and indicator.</details></li>
-</ul>
-</li>
-</ul>
+<p><a href="#demos-and-development"></a></p>
 <p><a href="#demos-and-development"></a></p>
 
 <a href="#demos-and-development" id="demos-and-development" style="color: inherit; text-decoration: none;">
@@ -415,7 +134,7 @@
   <h3>Repo Setup</h3>
 </a>
 <p>The repo uses submodules. If you did not clone with <code> --recursive</code> then you need to call</p>
-<pre><code><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-0">submodule</span><span class="hl-1"> </span><span class="hl-0">update</span><span class="hl-1"> --</span><span class="hl-0">init</span>
+<pre><code><span class="hl-2">git</span><span class="hl-0"> </span><span class="hl-2">submodule</span><span class="hl-0"> </span><span class="hl-2">update</span><span class="hl-0"> --</span><span class="hl-2">init</span>
 </code></pre>
 <p>The package manager used to install and link dependencies must be <code>pnpm</code> or <code>yarn</code>. <code>npm</code> wont work.</p>
 <p>To develop and test:
@@ -427,18 +146,19 @@ if you use <code>pnpm</code> then run <code>pnpm i</code></p>
 <a href="#build" id="build" style="color: inherit; text-decoration: none;">
   <h3>Build</h3>
 </a>
-<pre><code class="language-bash"><span class="hl-6">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">build.all</span>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">build.all</span>
 </code></pre>
 <p>WARNING: it seems <code>yarn build.all</code> wont always work (not finding binaries in <code>node_modules/.bin</code>) which is why the doc explicitly uses <code>npm run</code></p>
 
-<a href="#demos" id="demos" style="color: inherit; text-decoration: none;">
+<a href="#demos-1" id="demos-1" style="color: inherit; text-decoration: none;">
   <h3>Demos</h3>
 </a>
-<pre><code class="language-bash"><span class="hl-6">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">demo.[ng</span><span class="hl-1">|</span><span class="hl-6">react</span><span class="hl-1">|</span><span class="hl-6">svelte</span><span class="hl-1">|</span><span class="hl-6">vue].[ios</span><span class="hl-1">|</span><span class="hl-6">android]</span><br/><br/><span class="hl-6">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">demo.svelte.ios</span><span class="hl-1"> </span><span class="hl-11"># Example</span>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">demo.[ng</span><span class="hl-0">|</span><span class="hl-4">react</span><span class="hl-0">|</span><span class="hl-4">svelte</span><span class="hl-0">|</span><span class="hl-4">vue].[ios</span><span class="hl-0">|</span><span class="hl-4">android]</span><br/><br/><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">demo.svelte.ios</span><span class="hl-0"> </span><span class="hl-8"># Example</span>
 </code></pre>
 <p>Demo setup is a bit special in the sense that if you want to modify/add demos you dont work directly in <code>demo-[ng|react|svelte|vue]</code>
 Instead you work in <code>demo-snippets/[ng|react|svelte|vue]</code>
 You can start from the <code>install.ts</code> of each flavor to see how to register new demos </p>
+<p><a href="#contributing"></a></p>
 <p><a href="#contributing"></a></p>
 
 <a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
@@ -450,24 +170,24 @@ You can start from the <code>install.ts</code> of each flavor to see how to regi
 </a>
 <p>You can update the repo files quite easily</p>
 <p>First update the submodules</p>
-<pre><code class="language-bash"><span class="hl-6">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">update</span>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">update</span>
 </code></pre>
 <p>Then commit the changes
 Then update common files</p>
-<pre><code class="language-bash"><span class="hl-6">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">sync</span>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">sync</span>
 </code></pre>
 <p>Then you can run <code>yarn|pnpm</code>, commit changed files if any</p>
 
 <a href="#update-readme" id="update-readme" style="color: inherit; text-decoration: none;">
   <h3>Update readme</h3>
 </a>
-<pre><code class="language-bash"><span class="hl-6">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">readme</span>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">readme</span>
 </code></pre>
 
 <a href="#update-doc" id="update-doc" style="color: inherit; text-decoration: none;">
   <h3>Update doc</h3>
 </a>
-<pre><code class="language-bash"><span class="hl-6">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">doc</span>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">doc</span>
 </code></pre>
 
 <a href="#publish" id="publish" style="color: inherit; text-decoration: none;">
@@ -475,7 +195,7 @@ Then update common files</p>
 </a>
 <p>The publishing is completely handled by <code>lerna</code> (you can add <code>-- --bump major</code> to force a major release)
 Simply run </p>
-<pre><code class="language-shell"><span class="hl-6">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">publish</span>
+<pre><code class="language-shell"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">publish</span>
 </code></pre>
 
 <a href="#modifying-submodules" id="modifying-submodules" style="color: inherit; text-decoration: none;">
@@ -483,11 +203,98 @@ Simply run </p>
 </a>
 <p>The repo uses https:// for submodules which means you won&#39;t be able to push directly into the submodules.
 One easy solution is t modify <code>~/.gitconfig</code> and add</p>
-<pre><code><span class="hl-1">[</span><span class="hl-0">url</span><span class="hl-1"> </span><span class="hl-5">&quot;ssh://git@github.com/&quot;</span><span class="hl-1">]</span><br/><span class="hl-1">    </span><span class="hl-0">pushInsteadOf</span><span class="hl-1"> = </span><span class="hl-12">https</span><span class="hl-1">:</span><span class="hl-11">//github.com/</span>
+<pre><code><span class="hl-0">[</span><span class="hl-2">url</span><span class="hl-0"> </span><span class="hl-3">&quot;ssh://git@github.com/&quot;</span><span class="hl-0">]</span><br/><span class="hl-0">    </span><span class="hl-2">pushInsteadOf</span><span class="hl-0"> = </span><span class="hl-9">https</span><span class="hl-0">:</span><span class="hl-8">//github.com/</span>
 </code></pre>
+<p><a href="#questions"></a></p>
 <p><a href="#questions"></a></p>
 
 <a href="#questions" id="questions" style="color: inherit; text-decoration: none;">
+  <h2>Questions</h2>
+</a>
+<p>If you have any questions/issues/comments please feel free to create an issue or start a conversation in the <a href="https://nativescript.org/discord">NativeScript Community Discord</a>.</p>
+<p><a href="#demos-and-development"></a></p>
+
+<a href="#demos-and-development-1" id="demos-and-development-1" style="color: inherit; text-decoration: none;">
+  <h2>Demos and Development</h2>
+</a>
+
+<a href="#repo-setup-1" id="repo-setup-1" style="color: inherit; text-decoration: none;">
+  <h3>Repo Setup</h3>
+</a>
+<p>The repo uses submodules. If you did not clone with <code> --recursive</code> then you need to call</p>
+<pre><code><span class="hl-2">git</span><span class="hl-0"> </span><span class="hl-2">submodule</span><span class="hl-0"> </span><span class="hl-2">update</span><span class="hl-0"> --</span><span class="hl-2">init</span>
+</code></pre>
+<p>The package manager used to install and link dependencies must be <code>pnpm</code> or <code>yarn</code>. <code>npm</code> wont work.</p>
+<p>To develop and test:
+if you use <code>yarn</code> then run <code>yarn</code>
+if you use <code>pnpm</code> then run <code>pnpm i</code></p>
+<p><strong>Interactive Menu:</strong></p>
+<p>To start the interactive menu, run <code>npm start</code> (or <code>yarn start</code> or <code>pnpm start</code>). This will list all of the commonly used scripts.</p>
+
+<a href="#build-1" id="build-1" style="color: inherit; text-decoration: none;">
+  <h3>Build</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">build.all</span>
+</code></pre>
+<p>WARNING: it seems <code>yarn build.all</code> wont always work (not finding binaries in <code>node_modules/.bin</code>) which is why the doc explicitly uses <code>npm run</code></p>
+
+<a href="#demos-2" id="demos-2" style="color: inherit; text-decoration: none;">
+  <h3>Demos</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">demo.[ng</span><span class="hl-0">|</span><span class="hl-4">react</span><span class="hl-0">|</span><span class="hl-4">svelte</span><span class="hl-0">|</span><span class="hl-4">vue].[ios</span><span class="hl-0">|</span><span class="hl-4">android]</span><br/><br/><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">demo.svelte.ios</span><span class="hl-0"> </span><span class="hl-8"># Example</span>
+</code></pre>
+<p>Demo setup is a bit special in the sense that if you want to modify/add demos you dont work directly in <code>demo-[ng|react|svelte|vue]</code>
+Instead you work in <code>demo-snippets/[ng|react|svelte|vue]</code>
+You can start from the <code>install.ts</code> of each flavor to see how to register new demos </p>
+<p><a href="#contributing"></a></p>
+
+<a href="#contributing-1" id="contributing-1" style="color: inherit; text-decoration: none;">
+  <h2>Contributing</h2>
+</a>
+
+<a href="#update-repo-1" id="update-repo-1" style="color: inherit; text-decoration: none;">
+  <h3>Update repo</h3>
+</a>
+<p>You can update the repo files quite easily</p>
+<p>First update the submodules</p>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">update</span>
+</code></pre>
+<p>Then commit the changes
+Then update common files</p>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">sync</span>
+</code></pre>
+<p>Then you can run <code>yarn|pnpm</code>, commit changed files if any</p>
+
+<a href="#update-readme-1" id="update-readme-1" style="color: inherit; text-decoration: none;">
+  <h3>Update readme</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">readme</span>
+</code></pre>
+
+<a href="#update-doc-1" id="update-doc-1" style="color: inherit; text-decoration: none;">
+  <h3>Update doc</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">doc</span>
+</code></pre>
+
+<a href="#publish-1" id="publish-1" style="color: inherit; text-decoration: none;">
+  <h3>Publish</h3>
+</a>
+<p>The publishing is completely handled by <code>lerna</code> (you can add <code>-- --bump major</code> to force a major release)
+Simply run </p>
+<pre><code class="language-shell"><span class="hl-4">npm</span><span class="hl-0"> </span><span class="hl-3">run</span><span class="hl-0"> </span><span class="hl-3">publish</span>
+</code></pre>
+
+<a href="#modifying-submodules-1" id="modifying-submodules-1" style="color: inherit; text-decoration: none;">
+  <h3>modifying submodules</h3>
+</a>
+<p>The repo uses https:// for submodules which means you won&#39;t be able to push directly into the submodules.
+One easy solution is t modify <code>~/.gitconfig</code> and add</p>
+<pre><code><span class="hl-0">[</span><span class="hl-2">url</span><span class="hl-0"> </span><span class="hl-3">&quot;ssh://git@github.com/&quot;</span><span class="hl-0">]</span><br/><span class="hl-0">    </span><span class="hl-2">pushInsteadOf</span><span class="hl-0"> = </span><span class="hl-9">https</span><span class="hl-0">:</span><span class="hl-8">//github.com/</span>
+</code></pre>
+<p><a href="#questions"></a></p>
+
+<a href="#questions-1" id="questions-1" style="color: inherit; text-decoration: none;">
   <h2>Questions</h2>
 </a>
 <p>If you have any questions/issues/comments please feel free to create an issue or start a conversation in the <a href="https://nativescript.org/discord">NativeScript Community Discord</a>.</p>
