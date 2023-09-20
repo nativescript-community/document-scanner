@@ -29,7 +29,7 @@ export class DocumentScanner {
         letUserAdjustCrop?;
         maxNumDocuments?;
         croppedImageQuality?;
-    }) {
+    } = {}) {
         const activity = Application.android.startActivity as androidx.appcompat.app.AppCompatActivity;
         this.mNative = new com.websitebeaver.documentscanner.DocumentScanner(
             activity,
