@@ -1,6 +1,6 @@
 {
     "name": "@nativescript-community/document-scanner",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "A NativeScript plugin to scan documents ",
     "main": "index",
     "typings": "index.d.ts",
