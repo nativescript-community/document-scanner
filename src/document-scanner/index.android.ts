@@ -18,8 +18,11 @@ export class DocumentScanner {
     mNative: com.websitebeaver.documentscanner.DocumentScanner;
     resolve;
     reject;
+    //@ts-ignore
     successHandler: kotlin.jvm.functions.Function1;
+    //@ts-ignore
     errorHandler: kotlin.jvm.functions.Function1;
+    //@ts-ignore
     cancelHandler: kotlin.jvm.functions.Function0;
     constructor({
         responseType,
